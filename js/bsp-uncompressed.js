@@ -11,11 +11,6 @@ $("#btc").change(function () {
     updatePage();
 });
 
-$("#mBtc").change(function () {
-    unit = "mBtc";
-    updatePage();
-});
-
 $("#Sats").change(function () {
     unit = "Sats";
     updatePage();
@@ -46,7 +41,6 @@ function updatePage() {
     $('#results').html('');
 
     var conversionFactor = (unit == "Sats") ? 100000000 : 1;
-    var conversionFactor = (unit == "mBtc") ? 1000 : 1;
 	
 	var remainingBtc = initial;
 	remainingBtc *= conversionFactor;
